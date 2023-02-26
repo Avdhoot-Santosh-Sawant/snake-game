@@ -186,8 +186,6 @@ else {
 
     let options = speedSelect.children
 
-    console.log(options)
-
     for (let e of options) {
         if (e.getAttribute('selected')) {
             e.removeAttribute("selected")
@@ -202,14 +200,12 @@ let i = window.setInterval(draw, speed);
 
 
 speedSelect.addEventListener('input', function (event) {
-    console.log(runing)
     if (runing === false) {
         speed = event.target.value.toString().slice(0, 3)
         speed = Number(speed)
         window.localStorage.setItem('speed', JSON.stringify(speed));
         window.clearInterval(i)
         i = window.setInterval(draw, speed)
-        console.log(speed, runing)
     }
 })
 
