@@ -190,7 +190,7 @@ else {
         if (e.getAttribute('selected')) {
             e.removeAttribute("selected")
         }
-        if (Number(e.innerHTML.slice(0, 3)) == speed) {
+        if (Number(e.value) == speed) {
             e.setAttribute('selected', 'true')
         }
     }
@@ -201,7 +201,7 @@ let i = window.setInterval(draw, speed);
 
 speedSelect.addEventListener('input', function (event) {
     if (runing === false) {
-        speed = event.target.value.toString().slice(0, 3)
+        speed = event.target.value.toString()
         speed = Number(speed)
         window.localStorage.setItem('speed', JSON.stringify(speed));
         window.clearInterval(i)
