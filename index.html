@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>snake game</title>
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      #header {
+        text-align: center;
+        background-image: linear-gradient(
+          to left,
+          rgb(161, 31, 31),
+          green,
+          yellow,
+          pink
+        );
+        color: rgb(12, 10, 4);
+      }
+      #score {
+        text-align: center;
+        color: green;
+        margin-top: 20px;
+
+        position: relative !important;
+      }
+
+      #game {
+        border: 2px solid orangered;
+        margin: 20px auto;
+        display: block;
+        margin-top: 40px;
+      }
+
+      #select {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #speed {
+        margin-left: 10px;
+        padding: 2px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Snake Game</h1>
+    </div>
+    <div>
+      <h1 id="score">Score : 0</h1>
+      <div id="select">
+        <label>Select Speed :- </label>
+
+        <select id="speed" ">
+          <option>400ms</option>
+          <option selected>300ms</option>
+          <option>200ms</option>
+          <option>100ms</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <canvas id="game" width="400px" height="400px"> </canvas>
+      <div id="a"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
