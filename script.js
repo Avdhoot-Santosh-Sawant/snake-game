@@ -178,7 +178,7 @@ let speed = 300;
 let speedSelect = document.getElementById('speed')
 
 
-if (window.localStorage.getItem('speed') === undefined || null) {
+if (window.localStorage.getItem('speed') === null) {
     window.localStorage.setItem('speed', JSON.stringify(300));
 }
 else {
